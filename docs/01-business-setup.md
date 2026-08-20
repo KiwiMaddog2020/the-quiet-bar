@@ -52,7 +52,31 @@ INCI note: either raw-ingredient style (`Olea Europaea (Olive) Fruit Oil, Cocos 
 - Mandatory for any home business, renewed annually ([kelowna.ca home-based businesses](https://www.kelowna.ca/business-services/permits-licences/business-licences/home-businesses)).
 - **Verified fees** from [Business Licence and Regulation Bylaw No. 12585](https://apps.kelowna.ca/CityPage/Docs/PDFs/Bylaws/Business%20Licence%20and%20Regulation%20Bylaw%20No.%2012585.pdf): **$50 initial application + $160/year** under the **MANUFACTURING** category. Year one ≈ **$210**, then $160/year.
 - Pick MANUFACTURING, not SALES (also $160): manufacturers are "permitted to sell their manufactured products by retail without taking out any further licence," so one licence covers making *and* selling. Confirm the category with Business Licensing, 250-469-8617.
-- **There is no separate home-based business licence fee.** Home-Based Business is a *zoning* classification under Zoning Bylaw No. 12375; you pay the ordinary category fee above and must satisfy the zoning rules (production area, parking, no signage or customer traffic beyond limits).
+- **Initial licences are pro-rated by quarter** (100% / 75% / 50% / 25%). Applying in **Q4 (October onward) costs $50 + $40 = $90** instead of $210. Since the first sale is targeted for November anyway, waiting until October saves $120.
+- **Any one partner may apply on behalf of the partnership** (bylaw s.4.5) and is deemed the authorized agent.
+- **There is no separate home-based business licence fee.** Home-Based Business is a *zoning* classification under Zoning Bylaw No. 12375 — but the zoning rules themselves matter a lot. See below.
+
+## 4b. 🚨 Kelowna zoning: the constraint that shapes production
+
+[Zoning Bylaw No. 12375, s.9.2](https://apps.kelowna.ca/CityPage/Docs/PDFs/Bylaws/Zoning%20Bylaw%20No.%2012375.pdf). A home business must stay secondary to residential use.
+
+| | **Minor** | **Major** |
+|---|---|---|
+| Where | **Principal dwelling only** — no garage, no shed | Dwelling **or one accessory building** |
+| Max floor area | **20 m² and ≤25% of dwelling** | **50 m²** |
+| **Non-resident workers** | **Zero** | **One** |
+| Clients on site | 1 at a time | 2 at a time |
+| Parking required | None | **1.0 space** |
+
+Home soap making is permitted — manufacturing goods sold on-site is explicitly contemplated. But three things bite:
+
+1. **🚨 The two-partner problem.** Under Minor, *no person other than the principal residents of the dwelling* may work in the business on-site. **If both partners live in the same home, Minor is fine. If one partner lives elsewhere and comes over to make soap, that requires a Major home-based business** and triggers the parking requirement. **Settle this before applying for the licence**, because it determines which one you apply for.
+2. **Curing space.** Cold-process soap cures 4-6 weeks and eats real floor area. **Under Minor you cannot use the garage or a shed** — dwelling only, 20 m² and a quarter of the floor area. This is likely to cap batch size long before money does.
+3. **Odour.** The nuisance clause explicitly names odours, and enforcement is complaint-driven. A scent-free line is a real advantage here too, but ventilate the lye step regardless.
+
+Also: operators must reside at the property 240+ days/year, no exterior storage or operation, and selling from home is capped at one customer at a time. Markets and online are the real channels.
+
+Ask Business Licensing (250-469-8617) for the plain-language Home-Based Business bulletins; the City's site blocks automated access.
 - Licence the address where production actually happens.
 - No Interior Health involvement. IH regulates **food premises** only, and soap is not food, so there is no permit, no Letter of Confirmation, and no FOODSAFE/MarketSafe certificate. (This changes if you ever add lip balm or hand out food samples.)
 - **Do not buy the Okanagan-Similkameen inter-community licence ($150).** It covers mobile businesses that move client to client (contractors, mobile hairdressers) and *expressly excludes* vendors selling from a fixed spot such as market stalls. Correction to earlier guidance in this file.

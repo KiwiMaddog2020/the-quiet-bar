@@ -24,6 +24,8 @@ Scent-free, natural, coconut-forward handmade soap. Two partners, based in Kelow
 - [05-name-ideas.md](docs/05-name-ideas.md) — name shortlist with .ca availability (checked 2026-08-19); front-runner: **The Quiet Bar** (thequietbar.ca)
 - [06-budget.md](docs/06-budget.md) — one-pool budget in two tranches, per-bar economics, monthly fixed burn
 - [07-recipes.md](docs/07-recipes.md) — the recipe book: six scent-free recipes, easiest first, with exact weights and INCI labels
+- [08-grants-and-programs.md](docs/08-grants-and-programs.md) — free advisory, the $3,500/person training grant, two live grant deadlines, and the long list of programs not to waste time on
+- [09-labelling-and-compliance.md](docs/09-labelling-and-compliance.md) — CNF filing, what the label must say, claim rules, and record-keeping
 - [The-Quiet-Bar-Plan.pdf](docs/The-Quiet-Bar-Plan.pdf) — the partner one-pager (source: [one-pager.html](docs/one-pager.html)); regenerate with headless Chrome after edits
 
 ## Website
