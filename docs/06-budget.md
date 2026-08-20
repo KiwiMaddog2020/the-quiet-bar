@@ -11,11 +11,11 @@ Spend now. Gets a cured, tested batch and a legal business by mid-October.
 | Test-batch ingredients (Voyageur order: coconut RBD, olive, shea, castor, lye + shipping) | $89 | $95 |
 | Equipment (scale, stick blender, thermometer, mold, goggles, gloves, containers, pH strips) | $95 | $140 |
 | BC Name Request + partnership registration | $71 | $71 |
-| Kelowna home-based licence ($50 application + first annual fee) | $100 | $175 |
+| Kelowna business licence ($50 application + $160 MANUFACTURING, verified in bylaw 12585) | $210 | $210 |
 | .ca domain, 1 yr | $15 | $15 |
 | Etsy shop setup | $20 | $22 |
 | BC PST registration | $0 | $0 |
-| **Tranche 1 total** | **~$390** | **~$518** |
+| **Tranche 1 total** | **~$500** | **~$553** |
 
 ## Tranche 2: production and market-ready (~$950-1,060)
 
@@ -36,8 +36,8 @@ Spend ~6 weeks later, once the test batch confirms the recipe. Timed so bars cur
 
 | | |
 |---|---|
-| Total cash to first market | **~$1,350-1,750** |
-| Revenue to fully recoup (at $9/bar) | ~150-195 bars |
+| Total cash to first market | **~$1,450-1,800** |
+| Revenue to fully recoup (at $9/bar) | ~160-200 bars |
 | First production run yield | ~100-110 bars |
 | Materials per bar (first run, with packaging) | $2.40-2.75 |
 | Materials per bar (reorders, olive jug carries over) | ~$1.80 |

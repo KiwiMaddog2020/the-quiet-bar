@@ -44,9 +44,9 @@ Scent-free, natural, coconut-forward handmade soap. Two partners, based in Kelow
 |---|---|
 | Test-batch setup (equipment + ingredients) | ~$180-230 |
 | Business registration (name + partnership) | ~$70 |
-| Kelowna licence ($50 app + prorated annual) | ~$100-175 |
+| Kelowna business licence ($50 app + $160 manufacturing) | $210 |
 | Domain + Etsy setup | ~$35 |
-| **Subtotal: prove the product + legal shell** | **~$400-500** |
+| **Subtotal: prove the product + legal shell** | **~$500-550** |
 | First production run (100 bars, labels) | ~$390-470 |
 | Insurance ($2M via HBBG) | ~$500/yr |
 | Square reader | $0-59 |

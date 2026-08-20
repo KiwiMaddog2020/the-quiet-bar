@@ -38,9 +38,17 @@ Skip for now: Shopify Basic (C$51+/mo — revisit when online sales clear ~$2k/m
 - **Kelowna Farmers' and Crafters' Market (KFCM)** — the anchor. Season Apr-Oct, Wed + Sat, ~100 vendors, plus a winter market. **2026 applications are closed** — contact Frances (application@kelownafarmersandcraftersmarket.com, 778-215-4498) about mid-season Day Vendor jury openings, and apply for the **2027 season** via marketmaestro.ca. Products are juried; **cosmetic vendors must show Health Canada compliance and carry their own product liability insurance.**
 - **Craft Culture Holiday Market, Prospera Place, Dec 4-6 2026** — 200+ vendors, the Okanagan's largest holiday market and the highest-revenue days of the year for soap. **Apply now at craftculture.ca.**
 - **Downtown Kelowna Winter Street Market** — ~17,000 visitors, oversubscribed; apply the moment applications open.
-- **Penticton Farmers' Market** — casual day pass $40, published fee schedule; good proxy for KFCM costs.
-- **Lake Country Farmers' Market** — Fridays, small, low barrier. Good first market.
-- **Vernon** rotating market (no vendor fees listed) + Festival of Crafts.
+- **KFCM Fall/Winter Indoor Market** — Saturdays 9am-1pm, **November through March, Parkinson Recreation Centre**. This is the near-term way into Kelowna's main market while the outdoor season is closed. Ask whether winter runs on a separate application cycle.
+- **Peachland Farmers & Crafters Market** — the cheapest fully documented entry: **$40 day stall + $25 annual admin = $65**. Sundays 10am-2pm, 19 markets from the May long weekend to end of September. Soap is explicitly named in their crafter/artisan definition. Manager Linda Arpin, 250-317-0407.
+- **Westbank Farmers' Market** — **$25 per Saturday** or $275 for the 13-week season, June 27 to Sept 26, 15 minutes from Kelowna. Crafters welcome. Note the landlord (Callahan Property Group) must be named as additional insured alongside the market.
+- **East Kelowna Market** — pop-up style and the fastest route to a first sale; 2026 dates still ahead include **Aug 29, Sept 19, Sept 27, and Oct 11**. Artisan-friendly, no season commitment. Fees unpublished.
+- **Lake Country Farmers' Market** — Fridays, June to September, Swalwell Park. Small and low-barrier. Their old website is dead; they run on Facebook. Contact lcmarketmanager@gmail.com / 250-826-7100.
+- **Vernon Farmers' Market** — April to October, artisans are a listed category, but it's 50 minutes each way and fees aren't published. Weak fit year one.
+- **⛔ Penticton Farmers' Market is not available to you.** Their catchment is Osoyoos to Peachland plus the Similkameen, and the rule is explicit: "Crafters/Liquor vendors from outside our catchment area are not accepted." Kelowna is north of Peachland. This corrects earlier guidance in this file that suggested casual days there.
+
+**Market requirements specific to soap vendors:** KFCM's rules are unusually explicit and are a good checklist for any market — current liability insurance with the market named as additional insured, Health Canada cosmetic compliance, and correct labelling with a full ingredient list. Note that the $2M coverage KFCM provides its vendors is for trip-and-fall at the market only; it does **not** cover harm caused by your product. You need your own product liability policy.
+
+One oddity to expect: Peachland's application asks soap vendors for a "Natural Product registration number (NPN)." An NPN is for *natural health products* making therapeutic claims. Plain soap is a **cosmetic** and gets a Cosmetic Notification instead. This is a wording error in their form, not a real requirement. Sort it out with the manager rather than chasing an NPN you don't need.
 
 ## Wholesale / consignment (month 4-6)
 
@@ -59,7 +67,7 @@ Skip for now: Shopify Basic (C$51+/mo — revisit when online sales clear ~$2k/m
 ## Recommended rollout
 
 - **Phase 0 (weeks 1-4):** compliance + payments — register business, PST, insurance, labels, .ca domain + matching Instagram/Facebook handles, Square account + reader.
-- **Phase 1 (fall/winter):** local markets — Craft Culture (Dec 4-6) + Winter Street Market applications now; KFCM Day Vendor inquiry; casual days at Lake Country/Penticton in spring; KFCM 2027 season application. Face-to-face is where unscented wins: shoppers feel that "no scent" is a feature.
+- **Phase 1 (fall/winter):** local markets — Craft Culture (Dec 4-6) + Winter Street Market applications now; ask KFCM about the **Parkinson Rec winter market** (Nov-Mar) and Day Vendor jury openings; **East Kelowna Market** has dates left this fall; **Peachland ($65) and Westbank ($25/Saturday)** for spring; KFCM 2027 season application. Face-to-face is where unscented wins: shoppers feel that "no scent" is a feature.
 - **Phase 2 (months 1-2, parallel):** Etsy shop — 10-15 long-tail listings capturing existing niche search demand.
 - **Phase 3 (months 2-3):** self-hosted site live with Square payment links; FB/IG shop tabs as funnel; QR code on the market stall → mailing list. Repeat purchases at 2.9% instead of Etsy's 10.5%.
 - **Phase 4 (months 4-6):** wholesale — Nature's Fare, gift shops, B&B/spa amenity line.
