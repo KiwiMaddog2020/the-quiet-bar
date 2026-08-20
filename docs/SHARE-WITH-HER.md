@@ -14,9 +14,9 @@ The whole journey: what you'd own, what I'd handle, what it costs, and the dates
 https://kiwimaddog2020.github.io/the-quiet-bar/
 "The Quiet Bar" is just my working name, you get final say. Press and hold the little circle on the front page.
 
-**3. The recipe book and all the research:**
-https://github.com/KiwiMaddog2020/the-quiet-bar/blob/main/docs/07-recipes.md
-Six scent-free recipes, easiest first; the one to start with is at the top. The same folder has everything else: what the government needs, where supplies come from, where we'd sell, and the budget.
+**3. The recipe book:**
+https://kiwimaddog2020.github.io/the-quiet-bar/recipes.html
+Six scent-free recipes, easiest first; the one to start with is at the top. All the deeper research (regulations, suppliers, sales channels, budget) lives at https://github.com/KiwiMaddog2020/the-quiet-bar if you ever want it.
 
 No pressure and no deadline from me, except one real one: if we want to sell at the December craft markets, soap needs to be poured by mid-October because it cures for six weeks. Which mostly means: want to make a test batch together some weekend soon?
 
@@ -29,5 +29,5 @@ No pressure and no deadline from me, except one real one: if we want to sell at 
 | Live site | https://kiwimaddog2020.github.io/the-quiet-bar/ |
 | One-page plan | https://kiwimaddog2020.github.io/the-quiet-bar/plan.html |
 | Plan as PDF | https://kiwimaddog2020.github.io/the-quiet-bar/The-Quiet-Bar-Plan.pdf |
-| Recipe book | https://github.com/KiwiMaddog2020/the-quiet-bar/blob/main/docs/07-recipes.md |
+| Recipe book | https://kiwimaddog2020.github.io/the-quiet-bar/recipes.html |
 | Everything (repo) | https://github.com/KiwiMaddog2020/the-quiet-bar |
