@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Quiet Bar, The Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bone: #f6f5f0; --ink: #1b1a15; --stone: #7c7867; --olive: #5d6047; --hair: #dbd8cb;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  @page { size: letter; margin: 0; }
+  html, body { background: var(--bone); }
+  body { font-family: var(--sans); color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .sheet {
+    width: 8.5in; min-height: 11in; margin: 0 auto; padding: 0.52in 0.58in 0.42in;
+    display: flex; flex-direction: column; gap: 0.17in;
+  }
+  .label { font-size: 6.8pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); font-weight: 600; }
+  .serif { font-family: var(--serif); }
+
+  .masthead { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--ink); padding-bottom: 0.12in; }
+  .masthead .wordmark { font-family: var(--serif); font-size: 20pt; font-weight: 400; }
+  .masthead .wordmark em { font-style: italic; color: var(--olive); }
+  .masthead .meta { text-align: right; font-size: 7.5pt; color: var(--stone); line-height: 1.5; }
+
+  .thesis { display: grid; grid-template-columns: 1.5fr 1fr; gap: 0.35in; align-items: start; }
+  h1 { font-family: var(--serif); font-weight: 300; font-size: 24pt; line-height: 1.12; }
+  h1 em { font-style: italic; color: var(--olive); }
+  .thesis p { font-size: 8.6pt; line-height: 1.55; color: var(--stone); margin-top: 4pt; }
+  .thesis p b { color: var(--ink); }
+  .edge { border-left: 2px solid var(--olive); padding-left: 10pt; }
+  .edge .label { color: var(--olive); }
+  .edge ul { list-style: none; margin-top: 4pt; }
+  .edge li { font-size: 8.2pt; line-height: 1.5; color: var(--stone); padding: 1.5pt 0; }
+  .edge li b { color: var(--ink); font-weight: 600; }
+
+  h2.sec { font-family: var(--serif); font-weight: 400; font-size: 12.5pt; border-bottom: 1px solid var(--hair); padding-bottom: 3pt; margin-bottom: 6pt; }
+  h2.sec span { color: var(--stone); font-style: italic; }
+
+  .timeline { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8pt; }
+  .ph { border-top: 2px solid var(--hair); padding-top: 4pt; }
+  .ph.now { border-top-color: var(--olive); }
+  .ph .when { font-size: 6.5pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--olive); font-weight: 600; }
+  .ph .what { font-family: var(--serif); font-size: 10.5pt; margin: 1pt 0 2pt; }
+  .ph p { font-size: 7.2pt; line-height: 1.45; color: var(--stone); }
+
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 0.28in; }
+  .role .who { font-family: var(--serif); font-style: italic; font-size: 11.5pt; margin-bottom: 3pt; }
+  .role ul { list-style: none; }
+  .role li { font-size: 8.4pt; line-height: 1.5; color: var(--stone); padding: 1.6pt 0 1.6pt 10pt; position: relative; }
+  .role li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 4pt; height: 1px; background: var(--olive); }
+  .role li b { color: var(--ink); font-weight: 600; }
+
+  .money { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.25in; }
+  .money .block .label { margin-bottom: 3pt; }
+  .money table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  .money td { font-size: 8.2pt; padding: 2.2pt 0; border-bottom: 1px solid var(--hair); color: var(--stone); }
+  .money td:last-child { text-align: right; white-space: nowrap; color: var(--ink); }
+  .money tr.sum td { border-bottom: none; font-weight: 600; color: var(--ink); }
+  .bignum { font-family: var(--serif); font-size: 17pt; line-height: 1.1; }
+  .bignum small { font-family: var(--sans); font-size: 7.2pt; color: var(--stone); display: block; letter-spacing: 0.06em; margin-top: 2pt; }
+  .money .note { font-size: 7.4pt; color: var(--stone); line-height: 1.5; margin-top: 4pt; }
+
+  .week { background: var(--ink); color: var(--bone); border-radius: 4pt; padding: 9pt 12pt; display: grid; grid-template-columns: auto 1fr 1fr 1fr; gap: 0.22in; align-items: center; }
+  .week .label { color: #9a967f; }
+  .week .move { font-size: 8.2pt; line-height: 1.45; color: #c7c3b2; }
+  .week .move b { color: var(--bone); font-weight: 600; display: block; font-family: var(--serif); font-size: 10pt; font-weight: 400; }
+
+  .deadlines { display: flex; gap: 0.2in; justify-content: space-between; border-top: 1px solid var(--hair); padding-top: 6pt; margin-top: auto; }
+  .deadlines div { font-size: 7pt; line-height: 1.45; color: var(--stone); }
+  .deadlines b { color: var(--ink); font-weight: 600; }
+
+  @media screen { body { padding: 24px 0; } .sheet { box-shadow: 0 10px 40px rgba(40,36,24,0.18); } }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="masthead">
+    <div class="wordmark">The <em>Quiet</em> Bar</div>
+    <div class="meta">Working name, your call before we buy the domain<br>Kevin + you · Kelowna, BC · August 2026</div>
+  </div>
+
+  <div class="thesis">
+    <div>
+      <h1>A small soap company that competes on what it <em>leaves out.</em></h1>
+      <p>Truly scent-free, natural, coconut-forward bars, made by hand and cured six weeks. <b>Four ingredients: olive oil, coconut oil, water, lye.</b> No fragrance, no dye, no claims we can't keep. First sale target: <b>November, in time for the holiday markets.</b></p>
+    </div>
+    <div class="edge">
+      <span class="label">Why this wins</span>
+      <ul>
+        <li><b>People search for it.</b> "Unscented soap" and "fragrance free" are typed into Etsy every day by people with allergies and eczema.</li>
+        <li><b>Markets notice it.</b> Among 100 vendors, ours is the one stall a scent-sensitive shopper can buy from.</li>
+        <li><b>Stores need it.</b> Health stores and wine-country B&amp;Bs want unscented, BC-made bars for sensitive guests.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="sec">The road to first sale <span>· three months, roughly</span></h2>
+    <div class="timeline">
+      <div class="ph now"><span class="when">Sept · wk 1-2</span><div class="what">Test batch</div><p>Supplies arrive, you make batch nº 001. It cures while everything else happens.</p></div>
+      <div class="ph"><span class="when">Sept · wk 2-6</span><div class="what">Legal shell</div><p>Name registered, partnership filed, PST, city licence, insurance.</p></div>
+      <div class="ph"><span class="when">Oct · wk 4-8</span><div class="what">Production</div><p>~100 bars poured by mid-October so they cure in time for December.</p></div>
+      <div class="ph"><span class="when">Oct-Nov</span><div class="what">Channels</div><p>Etsy shop, our own website (built already), Square for payments.</p></div>
+      <div class="ph"><span class="when">Nov-Dec</span><div class="what">First sales</div><p>Holiday markets + Etsy. Health Canada notified within 10 days of first sale.</p></div>
+      <div class="ph"><span class="when">2027</span><div class="what">Scale</div><p>Farmers' market season stall, Nature's Fare pitch, B&amp;B guest bars.</p></div>
+    </div>
+  </div>
+
+  <div class="duo">
+    <div class="role">
+      <div class="who">You make the soap and own the product.</div>
+      <ul>
+        <li><b>Final say on the name.</b> Front-runner: The Quiet Bar (thequietbar.ca is free). Seven more candidates are checked and waiting.</li>
+        <li><b>Learn the craft.</b> A complete guide and a verified first recipe are ready for you, safety first, lye respected.</li>
+        <li><b>Make batch nº 001</b> and keep the batch log. Then the recipe line is yours to grow.</li>
+        <li><b>Set the standard.</b> If a bar isn't right, it doesn't leave the house.</li>
+      </ul>
+    </div>
+    <div class="role">
+      <div class="who">Kevin runs the rails underneath it.</div>
+      <ul>
+        <li><b>Paperwork:</b> BC partnership, PST, Kelowna home-business licence, insurance, Health Canada notifications.</li>
+        <li><b>Storefronts:</b> the website is already built, Etsy setup, Square payments for markets and online.</li>
+        <li><b>Applications:</b> Craft Culture holiday market, Winter Street Market, the 2027 farmers' market season.</li>
+        <li><b>The numbers:</b> budget, margins, and what's selling where.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="sec">Money <span>· one shared pool, two rounds</span></h2>
+    <div class="money">
+      <div class="block">
+        <span class="label">Round one · now</span>
+        <table>
+          <tr><td>Test batch, tools + ingredients</td><td>$180-230</td></tr>
+          <tr><td>Registration + licence + domain</td><td>$190-260</td></tr>
+          <tr class="sum"><td>Prove it works</td><td>~$400-500</td></tr>
+        </table>
+      </div>
+      <div class="block">
+        <span class="label">Round two · ~6 weeks in</span>
+        <table>
+          <tr><td>Ingredients + labels, ~100 bars</td><td>$380-480</td></tr>
+          <tr><td>Insurance + reader + booth fees</td><td>$575-770</td></tr>
+          <tr class="sum"><td>Market-ready</td><td>~$950-1,250</td></tr>
+        </table>
+      </div>
+      <div class="block">
+        <span class="label">What comes back</span>
+        <div class="bignum">~70% margin<small>each $9 bar costs about $2.50 to make</small></div>
+        <p class="note">Selling ~150-190 bars recoups everything. One good holiday market weekend plus steady Etsy sales gets there. After that, refill batches cost ~$160 and are nearly all margin.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="week">
+    <span class="label">This<br>week</span>
+    <div class="move"><b>1 · Order the kit</b>One box from Voyageur in Surrey plus a scale and safety gear.</div>
+    <div class="move"><b>2 · Read, then pour</b>The guide takes an evening. Batch nº 001 takes an afternoon.</div>
+    <div class="move"><b>3 · Pick the name</b>The moment you decide, Kevin registers everything the same day.</div>
+  </div>
+
+  <div class="deadlines">
+    <div><b>Mid-October</b><br>last pour date for December-ready bars</div>
+    <div><b>Craft Culture market, Dec 4-6</b><br>apply as soon as the name exists</div>
+    <div><b>Before first sale</b><br>BC PST registration (7%, day one)</div>
+    <div><b>Within 10 days of first sale</b><br>Health Canada cosmetic notification, free</div>
+  </div>
+
+</div>
+</body>
+</html>
