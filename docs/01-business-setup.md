@@ -45,7 +45,15 @@ INCI note: either raw-ingredient style (`Olea Europaea (Olive) Fruit Oil, Cocos 
 
 **GST:** exempt as a "small supplier" until $30,000 in taxable sales over four consecutive quarters. Don't register until close to the threshold (unless you want input tax credits).
 
-**BC PST: applies from roughly day one.** Handmade soap is PST-taxable at 7% (Bulletin PST 206), and **PST has no $30k grace period** — only a small-seller carve-out below ~$10,000/yr gross. Expect to register (free) and collect 7% at markets and on BC online orders ([Small business guide to PST](https://www2.gov.bc.ca/gov/content/taxes/sales-taxes/pst/publications/small-business-guide)). This is the most commonly missed item on this list.
+**BC PST: soap is taxable at 7%, and the small-seller test is not just about revenue.** Per [Bulletin PST 003](https://www2.gov.bc.ca/assets/gov/taxes/sales-taxes/publications/pst-003-small-sellers.pdf) (revised July 2026), you are a small seller only if **all three** are true: gross retail revenue ≤$10,000; no wholesale sales; **and** you don't sell **four or more times in 12 months from "established commercial premises."**
+
+That third test is the trap, because the bulletin's own definition of established commercial premises explicitly includes *"a stall or table in an outdoor location generally rented for sales… e.g. a bazaar, flea market, **farmers market**."*
+
+**So four market days in a year forces PST registration even at $2,000 of revenue.** What does *not* count: school parking lots, church halls, and a home with no storefront. **Online sales from home preserve small-seller status**, and so does doing three or fewer market days a year.
+
+Since the plan is holiday markets plus regular market season, assume registration. **The silver lining is real: registered vendors can buy oils, lye, packaging and labels PST-exempt when the goods are for resale or become part of a product for resale. Small sellers are explicitly ineligible for that exemption**, so registering may cost little on net and could save money on every batch.
+
+Register free at [gov.bc.ca PST registration](https://www2.gov.bc.ca/gov/content/taxes/sales-taxes/pst/register). The PST Branch (1-877-388-4440) runs **free one-hour webinars with live Q&A**.
 
 ## 4. City of Kelowna: home-based business licence
 
