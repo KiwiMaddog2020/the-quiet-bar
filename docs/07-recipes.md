@@ -15,7 +15,7 @@ The full method (trace, molding, insulating, cutting, troubleshooting) is in [04
 
 ---
 
-## Nº 1 · The Original — her first batch ★ start here
+## Nº 1 · The Original, her first batch ★ start here
 
 The 70/30 workhorse. Creamy, gentle, hard to get wrong. Makes ~7 bars.
 
@@ -29,7 +29,7 @@ The 70/30 workhorse. Creamy, gentle, hard to get wrong. Makes ~7 bars.
 Difficulty: beginner. Trace: 3-6 minutes. Unmold: day 2-3. Cure: 6 weeks.
 Label (INCI): Sodium Olivate, Sodium Cocoate, Glycerin, Water/Eau.
 
-## Nº 2 · The Coconut — one oil, taken seriously
+## Nº 2 · The Coconut, one oil, taken seriously
 
 Bright white, huge bubbly lather, works in hard water. The high superfat (20%) is what keeps a pure coconut bar from being drying; do not "correct" it down to 5%.
 
@@ -42,7 +42,7 @@ Bright white, huge bubbly lather, works in hard water. The high superfat (20%) i
 Difficulty: beginner, but it moves fast. Coconut traces quickly and heats up hard; blend in short bursts, pour a little earlier than feels done (thin trace is fine), insulate lightly or not at all. Cut on day 1-2 before it gets rock hard. Cure: 6 weeks.
 Label (INCI): Sodium Cocoate, Glycerin, Water/Eau, Cocos Nucifera (Coconut) Oil.
 
-## Nº 3 · The Everyday — the production recipe
+## Nº 3 · The Everyday, the production recipe
 
 The four-oil blend from the sourcing plan, and the recipe the business scales on. Shea adds creaminess and hardness, castor stabilizes the lather. This is the 1 kg version: fills one large loaf mold, ~10 bars.
 
@@ -58,7 +58,7 @@ The four-oil blend from the sourcing plan, and the recipe the business scales on
 Difficulty: easy once Nº 1 has gone well. Melt shea gently with the coconut; castor speeds trace slightly. Cure: 6 weeks.
 Label (INCI): Sodium Olivate, Sodium Cocoate, Sodium Shea Butterate, Sodium Castorate, Glycerin, Water/Eau.
 
-## Nº 4 · The Porridge — the sensitive-skin flagship
+## Nº 4 · The Porridge, the sensitive-skin flagship
 
 Nº 1 with finely ground oats. Oatmeal is the classic gentle-skin additive and it stays fully scent-free. (Say "with colloidal oatmeal, gentle on skin." Never say it treats eczema; that's a drug claim.)
 
@@ -73,7 +73,7 @@ Nº 1 with finely ground oats. Oatmeal is the classic gentle-skin additive and i
 Difficulty: beginner plus one step. Blitz the oats to powder (coffee grinder or blender; coarse oats scratch and go slimy). Stir them in at light trace, by hand, then pour. Expect a speckled cream-coloured bar. Cure: 6 weeks.
 Label (INCI): Sodium Olivate, Sodium Cocoate, Glycerin, Water/Eau, Avena Sativa (Oat) Kernel Flour.
 
-## Nº 5 · The Shoreline — coconut salt bar
+## Nº 5 · The Shoreline, coconut salt bar
 
 A spa-style bar: dense, smooth like a stone, with a lotion-y lather. Salt kills lather, which is why this is coconut-heavy (coconut is the only oil that can push suds through it). A natural premium SKU at $10-12.
 
@@ -89,7 +89,7 @@ A spa-style bar: dense, smooth like a stone, with a lotion-y lather. Salt kills 
 Difficulty: intermediate, purely because of timing. Use **fine** sea salt, never coarse (scratchy) and never Dead Sea salt (weeps). Stir salt in at light trace, pour fast, and **cut at 2-4 hours while still warm**; wait overnight and it shatters instead of slicing. Individual cavity molds sidestep the cutting deadline entirely. Cure: 6+ weeks, gets better for months.
 Label (INCI): Sodium Cocoate, Sodium Olivate, Sodium Castorate, Sea Salt (Maris Sal), Glycerin, Water/Eau.
 
-## Nº 6 · The Heirloom — pure Castile (the patience project)
+## Nº 6 · The Heirloom, pure Castile (the patience project)
 
 100% olive oil, the two-thousand-year-old recipe. Absurdly gentle, historically the baby-skin soap. The catch: it's soft and slimy young, and only becomes wonderful with a long cure. Start a loaf now, sell it next spring as a limited aged bar.
 

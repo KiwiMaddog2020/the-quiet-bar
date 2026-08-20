@@ -4,7 +4,7 @@ Researched 2026-08-19. Prices CAD from supplier sites; oils move with commodity 
 
 ## Bottom line
 
-**Primary supplier: [Voyageur Soap & Candle](https://www.voyageursoapandcandle.com/) (Surrey, BC).** Best combination of price, range, and proximity — ships to Kelowna in 1-3 days, and everything (oils, lye, shea, castor, molds) comes in one box. **Backup: [Windy Point Soap](https://www.windypointsoap.com/) (Calgary)** for 2-4kg lye sizes and shrink bands.
+**Primary supplier: [Voyageur Soap & Candle](https://www.voyageursoapandcandle.com/) (Surrey, BC).** Best combination of price, range, and proximity, ships to Kelowna in 1-3 days, and everything (oils, lye, shea, castor, molds) comes in one box. **Backup: [Windy Point Soap](https://www.windypointsoap.com/) (Calgary)** for 2-4kg lye sizes and shrink bands.
 
 ## Supplier comparison
 
@@ -18,9 +18,9 @@ Researched 2026-08-19. Prices CAD from supplier sites; oils move with commodity 
 
 ## Critical sourcing notes
 
-1. **Coconut oil must be RBD 76** (refined, bleached, deodorized; "76" = melt point °F) for a scent-free brand. **Costco and Bulk Barn coconut oil is virgin — it smells like coconut.** Costco Kirkland olive oil (3L) is a legitimate local fallback for the olive portion.
-2. **Never use hardware-store drain-cleaner lye** unless labelled 100% sodium hydroxide — most contain aluminum flakes, dyes, or surfactants ([RusticWise guide](https://rusticwise.com/where-to-buy-sodium-hydroxide-for-soapmaking/)). Supplier-grade lye has known purity (your lye calculation assumes it) and comes with an SDS. Small sizes (454g-1kg) ship without dangerous-goods fees; Voyageur's 25kg size adds a $35 DG fee.
-3. **[Universal Packaging](https://universalpackaging.ca/soap-packaging/) is in Vernon** — 30 minutes from Kelowna, does printed kraft soap boxes. A genuinely good local packaging partner for when you scale.
+1. **Coconut oil must be RBD 76** (refined, bleached, deodorized; "76" = melt point °F) for a scent-free brand. **Costco and Bulk Barn coconut oil is virgin. It smells like coconut.** Costco Kirkland olive oil (3L) is a legitimate local fallback for the olive portion.
+2. **Never use hardware-store drain-cleaner lye** unless labelled 100% sodium hydroxide, most contain aluminum flakes, dyes, or surfactants ([RusticWise guide](https://rusticwise.com/where-to-buy-sodium-hydroxide-for-soapmaking/)). Supplier-grade lye has known purity (your lye calculation assumes it) and comes with an SDS. Small sizes (454g-1kg) ship without dangerous-goods fees; Voyageur's 25kg size adds a $35 DG fee.
+3. **[Universal Packaging](https://universalpackaging.ca/soap-packaging/) is in Vernon**: 30 minutes from Kelowna, does printed kraft soap boxes. A genuinely good local packaging partner for when you scale.
 
 ## Equipment list (test batch + small production)
 
@@ -37,7 +37,7 @@ Researched 2026-08-19. Prices CAD from supplier sites; oils move with commodity 
 
 ## Packaging for the scent-free natural brand
 
-- **Naked bars + kraft cigar band** — cheapest, most on-brand. Pennies per bar; print at home or a Kelowna shop ([Snap Labels](https://snaplabels.ca/), [LabelPak](https://www.labelpakprinting.com/pages/service-areas/custom-label-printing-retail-packaging-kelowna), Staples Print).
+- **Naked bars + kraft cigar band**: cheapest, most on-brand. Pennies per bar; print at home or a Kelowna shop ([Snap Labels](https://snaplabels.ca/), [LabelPak](https://www.labelpakprinting.com/pages/service-areas/custom-label-printing-retail-packaging-kelowna), Staples Print).
 - **Kraft boxes** at scale: Universal Packaging (Vernon, quote-based) or [Custapack](https://www.custapack.com/products/kraft-soap-boxes) (~$0.30-0.80/box at 250-500 qty).
 - **Labels online:** [Sticker Mule Canada](https://www.stickermule.com/ca) ~$60-90 for 250-500; [Avery WePrint](https://www.avery.ca/en/use/bath-beauty/soap-sanitizer-labels.html) for low minimums and oil-resistant stock.
 - Scent-free bars don't need shrink-band smell holes; a paper band alone is defensible and reads "natural."

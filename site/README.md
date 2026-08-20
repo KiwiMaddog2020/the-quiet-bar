@@ -10,7 +10,7 @@ Built with **The Quiet Bar** as placeholder. To change: edit the `BRAND` const i
 
 ## Deploy (pick one, both free)
 
-**Cloudflare Pages** (recommended — also gives free DNS for the .ca domain):
+**Cloudflare Pages** (recommended, also gives free DNS for the .ca domain):
 1. Push this `site/` folder to a GitHub repo (or use direct upload at dash.cloudflare.com → Workers & Pages).
 2. Connect the repo, set the build output directory to `site/` (no build command).
 3. Add the custom domain (e.g., thequietbar.ca) in the Pages project → Custom domains.
@@ -22,7 +22,7 @@ Built with **The Quiet Bar** as placeholder. To change: edit the `BRAND` const i
 Each Buy button reads `data-payment-link` from its markup. Until a URL is pasted in, buttons show "Coming soon."
 
 **Recommended: Square payment links** (free, and the same Square account runs the market card reader with unified inventory):
-1. squareup.com → sign up (business account, needs bank details — the business owner should do this step, not Claude).
+1. squareup.com → sign up (business account, needs bank details, the business owner should do this step, not Claude).
 2. Items → create The Original / The Coconut / The Quiet Trio with prices.
 3. Online Checkout → create a payment link per item (enable shipping address collection).
 4. Paste each URL into the matching `data-payment-link=""` in index.html and redeploy.
