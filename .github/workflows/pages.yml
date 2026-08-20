@@ -27,6 +27,7 @@ jobs:
           mkdir _site
           cp site/index.html _site/
           cp docs/one-pager.html _site/plan.html
+          cp docs/recipe-book.html _site/recipes.html
           cp docs/The-Quiet-Bar-Plan.pdf _site/
       - uses: actions/configure-pages@v5
         with:

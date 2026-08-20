@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Quiet Bar Recipe Book</title>
+<meta name="description" content="Six scent-free soap recipes, easiest first. Exact weights, pre-checked lye amounts, and the rules that keep every batch safe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bone: #f6f5f0; --milk: #fbfaf7; --ink: #1b1a15; --stone: #7c7867;
+    --olive: #5d6047; --hair: #e0ddd0; --amber: #a8722e;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  body { background: var(--bone); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+  a { color: var(--olive); }
+  .label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); font-weight: 600; }
+
+  header.top { padding: 40px 0 0; }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: baseline; }
+  .wordmark { font-family: var(--serif); font-size: 1.15rem; text-decoration: none; color: var(--ink); }
+  .wordmark em { font-style: italic; color: var(--olive); }
+  header.top a.back { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; color: var(--stone); }
+  header.top a.back:hover { color: var(--ink); }
+
+  .hero { padding: 64px 0 48px; }
+  .hero h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(2.6rem, 8vw, 4rem); line-height: 1.08; text-wrap: balance; }
+  .hero h1 em { font-style: italic; color: var(--olive); }
+  .hero p { color: var(--stone); max-width: 52ch; margin-top: 18px; }
+
+  .rules { background: var(--ink); color: var(--bone); border-radius: 10px; padding: 30px 30px 26px; margin-bottom: 70px; }
+  .rules .label { color: #9a967f; }
+  .rules ol { margin: 14px 0 0 1.2em; }
+  .rules li { padding: 5px 0; color: #c7c3b2; font-size: 0.95rem; }
+  .rules li b { color: var(--bone); font-weight: 600; }
+  .rules .foot { margin-top: 14px; font-size: 0.85rem; color: #9a967f; }
+  .rules .foot a { color: #c9c4a9; }
+
+  .recipe { margin-bottom: 76px; }
+  .recipe .no { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--olive); }
+  .recipe h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 5vw, 2.3rem); line-height: 1.15; margin: 4px 0 2px; }
+  .recipe .tag { font-family: var(--serif); font-style: italic; color: var(--stone); font-size: 1.05rem; }
+  .recipe .intro { color: var(--stone); margin: 14px 0 20px; max-width: 56ch; }
+  .recipe .intro b { color: var(--ink); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .chip { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--hair); border-radius: 999px; color: var(--stone); background: var(--milk); }
+  .chip.easy { border-color: var(--olive); color: var(--olive); }
+  .chip.watch { border-color: var(--amber); color: var(--amber); }
+
+  table { width: 100%; border-collapse: collapse; background: var(--milk); border: 1px solid var(--hair); border-radius: 8px; overflow: hidden; font-variant-numeric: tabular-nums; }
+  .tbl { border-radius: 8px; overflow: hidden; border: 1px solid var(--hair); }
+  .tbl table { border: none; }
+  td { padding: 10px 16px; border-bottom: 1px solid var(--hair); font-size: 0.95rem; }
+  tr:last-child td { border-bottom: none; }
+  td:last-child { text-align: right; white-space: nowrap; }
+  tr.lye td { font-weight: 600; }
+  tr.lye td:first-child::after { content: " · verify on soapcalc.net"; font-weight: 400; font-size: 0.75rem; color: var(--amber); }
+  tr.extra td { color: var(--stone); }
+
+  .recipe .notes { margin-top: 16px; color: var(--stone); font-size: 0.93rem; max-width: 58ch; }
+  .recipe .notes b { color: var(--ink); }
+  .inci { margin-top: 14px; font-size: 0.78rem; color: var(--stone); letter-spacing: 0.02em; }
+  .inci span { color: var(--olive); font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.66rem; margin-right: 8px; }
+
+  .order { border-top: 1px solid var(--hair); padding: 56px 0 30px; }
+  .order h2 { font-family: var(--serif); font-weight: 400; font-size: 1.8rem; margin-bottom: 18px; }
+  .order ol { margin-left: 1.2em; }
+  .order li { padding: 5px 0; color: var(--stone); }
+  .order li b { color: var(--ink); font-weight: 600; }
+  .order .promise { font-family: var(--serif); font-style: italic; font-size: 1.3rem; margin-top: 26px; color: var(--ink); }
+
+  footer { border-top: 1px solid var(--hair); padding: 30px 0 56px; color: var(--stone); font-size: 0.82rem; }
+  footer a { color: var(--stone); }
+
+  @media print {
+    .rules { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .recipe { break-inside: avoid; margin-bottom: 40px; }
+    header.top, footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="wordmark" href="./">The <em>Quiet</em> Bar</a>
+    <a class="back" href="./">the site</a>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <h1>The recipe <em>book.</em></h1>
+  <p>Six scent-free recipes, easiest first. Weights are in grams, lye amounts are pre-calculated, and every recipe uses only what's in the starter order plus groceries. The full method lives with recipe nº 1; the others note where they differ.</p>
+</div>
+
+<div class="wrap">
+  <div class="rules">
+    <span class="label">The rules for every single batch</span>
+    <ol>
+      <li><b>Run the numbers through soapcalc.net before you pour, every time.</b> Enter the oils and superfat, confirm the lye weight matches within a gram. This habit is what keeps soap safe.</li>
+      <li>Full gear from lye-mixing to cleanup: sealed goggles, nitrile gloves, sleeves. <b>Lye into water, never water into lye.</b> No aluminum tools, ever.</li>
+      <li>Combine oils and lye solution at 38-43°C, within about ten degrees of each other.</li>
+      <li>Log every batch: number, date, weights, temperatures, anything odd.</li>
+      <li>New ingredient = new formula. Check it against the Health Canada Hotlist first, and each formula needs its own notification after first sale.</li>
+      <li>Cure on a rack with airflow. Zap test at week two. Nothing sells before six weeks.</li>
+    </ol>
+    <p class="foot">Trace, molding, cutting, and troubleshooting are covered step by step in the <a href="https://github.com/KiwiMaddog2020/the-quiet-bar/blob/main/docs/04-soapmaking-basics.md">soap-making guide</a>.</p>
+  </div>
+
+  <div class="recipe">
+    <span class="no">Recipe nº 1 · start here</span>
+    <h2>The Original</h2>
+    <p class="tag">the 70/30 workhorse, her first batch</p>
+    <div class="chips"><span class="chip easy">Beginner</span><span class="chip">~7 bars</span><span class="chip">Trace 3-6 min</span><span class="chip">Cure 6 weeks</span></div>
+    <p class="intro">Creamy, gentle, and hard to get wrong. Olive for mildness, coconut for hardness and lather.</p>
+    <div class="tbl"><table>
+      <tr><td>Olive oil</td><td>350 g</td></tr>
+      <tr><td>Coconut oil (RBD 76)</td><td>150 g</td></tr>
+      <tr class="lye"><td>Lye (NaOH), 5% superfat</td><td>70.6 g</td></tr>
+      <tr><td>Distilled water</td><td>140-155 g</td></tr>
+    </table></div>
+    <p class="notes">Unmold day 2-3. Follow the full method in the guide start to finish for this one.</p>
+    <p class="inci"><span>Label</span>Sodium Olivate, Sodium Cocoate, Glycerin, Water/Eau</p>
+  </div>
+
+  <div class="recipe">
+    <span class="no">Recipe nº 2</span>
+    <h2>The Coconut</h2>
+    <p class="tag">one oil, taken seriously</p>
+    <div class="chips"><span class="chip easy">Beginner</span><span class="chip watch">Moves fast</span><span class="chip">~7 bars</span><span class="chip">Cure 6 weeks</span></div>
+    <p class="intro">Bright white with huge bubbly lather; it even works in hard water. The high superfat is what keeps a pure coconut bar from being drying, so <b>do not "correct" the 20% down to 5%.</b></p>
+    <div class="tbl"><table>
+      <tr><td>Coconut oil (RBD 76)</td><td>500 g</td></tr>
+      <tr class="lye"><td>Lye (NaOH), 20% superfat</td><td>73.2 g</td></tr>
+      <tr><td>Distilled water</td><td>146-150 g</td></tr>
+    </table></div>
+    <p class="notes">Coconut traces quickly and heats up hard. Blend in short bursts, pour at thin trace, insulate lightly or not at all, and <b>cut on day 1-2</b> before it turns rock hard.</p>
+    <p class="inci"><span>Label</span>Sodium Cocoate, Glycerin, Water/Eau, Cocos Nucifera (Coconut) Oil</p>
+  </div>
+
+  <div class="recipe">
+    <span class="no">Recipe nº 3</span>
+    <h2>The Everyday</h2>
+    <p class="tag">the production recipe the business scales on</p>
+    <div class="chips"><span class="chip easy">Easy after nº 1</span><span class="chip">~10 bars</span><span class="chip">1 kg loaf</span><span class="chip">Cure 6 weeks</span></div>
+    <p class="intro">The four-oil blend. Shea adds creaminess and hardness, castor steadies the lather. This becomes the October production loaf.</p>
+    <div class="tbl"><table>
+      <tr><td>Olive oil</td><td>550 g</td></tr>
+      <tr><td>Coconut oil (RBD 76)</td><td>300 g</td></tr>
+      <tr><td>Shea butter (refined)</td><td>100 g</td></tr>
+      <tr><td>Castor oil</td><td>50 g</td></tr>
+      <tr class="lye"><td>Lye (NaOH), 7% superfat</td><td>137.5 g</td></tr>
+      <tr><td>Distilled water</td><td>275-280 g</td></tr>
+    </table></div>
+    <p class="notes">Melt the shea gently with the coconut. Castor speeds trace a little.</p>
+    <p class="inci"><span>Label</span>Sodium Olivate, Sodium Cocoate, Sodium Shea Butterate, Sodium Castorate, Glycerin, Water/Eau</p>
+  </div>
+
+  <div class="recipe">
+    <span class="no">Recipe nº 4</span>
+    <h2>The Porridge</h2>
+    <p class="tag">the sensitive-skin flagship</p>
+    <div class="chips"><span class="chip easy">Beginner + one step</span><span class="chip">~7 bars</span><span class="chip">Cure 6 weeks</span></div>
+    <p class="intro">Recipe nº 1 with finely ground oats, the classic gentle-skin additive, and still completely scent-free. Say "with colloidal oatmeal, gentle on skin." <b>Never say it treats eczema</b>; that's a drug claim and it's the fastest way into trouble.</p>
+    <div class="tbl"><table>
+      <tr><td>Olive oil</td><td>350 g</td></tr>
+      <tr><td>Coconut oil (RBD 76)</td><td>150 g</td></tr>
+      <tr class="lye"><td>Lye (NaOH), 5% superfat</td><td>70.6 g</td></tr>
+      <tr><td>Distilled water</td><td>140-155 g</td></tr>
+      <tr class="extra"><td>Rolled oats, ground to flour</td><td>15 g</td></tr>
+    </table></div>
+    <p class="notes">Blitz the oats to powder first; coarse oats scratch and go slimy. Stir in by hand at light trace, then pour. Expect a speckled, cream-coloured bar.</p>
+    <p class="inci"><span>Label</span>Sodium Olivate, Sodium Cocoate, Glycerin, Water/Eau, Avena Sativa (Oat) Kernel Flour</p>
+  </div>
+
+  <div class="recipe">
+    <span class="no">Recipe nº 5</span>
+    <h2>The Shoreline</h2>
+    <p class="tag">the coconut salt bar, a premium SKU</p>
+    <div class="chips"><span class="chip watch">Intermediate: timing</span><span class="chip">~8 bars</span><span class="chip watch">Cut at 2-4 h</span><span class="chip">Cure 6+ weeks</span></div>
+    <p class="intro">Dense and smooth like a beach stone, with a lotion-y lather. Salt kills suds, which is why this is coconut-heavy; coconut is the only oil that pushes lather through it. Sells at $10-12.</p>
+    <div class="tbl"><table>
+      <tr><td>Coconut oil (RBD 76)</td><td>400 g</td></tr>
+      <tr><td>Olive oil</td><td>75 g</td></tr>
+      <tr><td>Castor oil</td><td>25 g</td></tr>
+      <tr class="lye"><td>Lye (NaOH), 20% superfat</td><td>69.2 g</td></tr>
+      <tr><td>Distilled water</td><td>138-145 g</td></tr>
+      <tr class="extra"><td>Fine sea salt</td><td>250 g</td></tr>
+    </table></div>
+    <p class="notes"><b>Fine</b> sea salt only: never coarse (scratchy), never Dead Sea (weeps). Stir in at light trace, pour fast, and <b>cut while still warm at 2-4 hours</b>; overnight it shatters instead of slicing. Individual cavity molds skip the deadline entirely. It keeps improving for months.</p>
+    <p class="inci"><span>Label</span>Sodium Cocoate, Sodium Olivate, Sodium Castorate, Sea Salt (Maris Sal), Glycerin, Water/Eau</p>
+  </div>
+
+  <div class="recipe">
+    <span class="no">Recipe nº 6</span>
+    <h2>The Heirloom</h2>
+    <p class="tag">pure Castile, the patience project</p>
+    <div class="chips"><span class="chip easy">Beginner to make</span><span class="chip watch">Cure 6-12 months</span><span class="chip">~7 bars</span></div>
+    <p class="intro">100% olive oil, the two-thousand-year-old recipe, absurdly gentle. The catch: it's soft and slimy young, and only becomes wonderful with age. Pour a loaf now, sell it next spring as a limited aged bar.</p>
+    <div class="tbl"><table>
+      <tr><td>Olive oil</td><td>500 g</td></tr>
+      <tr class="lye"><td>Lye (NaOH), 5% superfat</td><td>63.7 g</td></tr>
+      <tr><td>Distilled water</td><td>127-135 g</td></tr>
+    </table></div>
+    <p class="notes">Trace takes ten minutes or more of patient bursts; it's ready when it's ready. Date the loaf and forget about it.</p>
+    <p class="inci"><span>Label</span>Sodium Olivate, Glycerin, Water/Eau</p>
+  </div>
+
+  <div class="order">
+    <h2>The order of attack</h2>
+    <ol>
+      <li><b>Nº 1 this week</b>: learn the process. It becomes The Original.</li>
+      <li><b>Nº 2 the following week</b>: learn how a fast batter feels. It becomes The Coconut.</li>
+      <li><b>Nº 4 when nº 1 felt comfortable</b>: same recipe plus oats, and the strongest fit for the brand.</li>
+      <li><b>Nº 3 as the first big production loaf</b> in October.</li>
+      <li><b>Nº 5 and nº 6 when you're having fun</b>: one becomes the premium bar, the other becomes next year's story.</li>
+    </ol>
+    <p class="promise">Every recipe here shares one label promise: no fragrance, no dye, nothing that needs an asterisk.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    The Quiet Bar · Kelowna, BC · <a href="./">the site</a> · <a href="./plan.html">the plan</a>
+  </div>
+</footer>
+
+</body>
+</html>
