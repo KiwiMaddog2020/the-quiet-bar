@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  THE QUIET BAR  (working name; swap via BRAND const in the script at the bottom)
+  Payments: paste Square or Stripe payment-link URLs into each data-payment-link.
+  Fonts load from Google Fonts. To self-host later: download Cormorant Garamond
+  woff2 files and replace the <link> with @font-face rules.
+-->
+<title>The Quiet Bar. Scent-free soap, handmade in Kelowna.</title>
+<meta name="description" content="Truly fragrance-free soap. No scent, no dye, no noise. Four ingredients, poured by hand in Kelowna, BC and cured six weeks. Made for sensitive skin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bone: #f6f5f0;
+    --milk: #fbfaf7;
+    --ink: #1b1a15;
+    --stone: #85816f;
+    --olive: #5d6047;
+    --hair: #e3e1d6;
+    --soap-hi: #f2f0e8;
+    --soap-lo: #ddd9ca;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bone);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--olive); color: var(--bone); }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+
+  .label {
+    font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone);
+  }
+  h1, h2, .serif { font-family: var(--serif); font-weight: 300; }
+
+  /* ---------- nav ---------- */
+  header {
+    position: fixed; inset: 0 0 auto 0; z-index: 20;
+    transition: background 0.4s, border-color 0.4s;
+    border-bottom: 1px solid transparent;
+  }
+  header.scrolled { background: rgba(246,245,240,0.9); backdrop-filter: blur(10px); border-color: var(--hair); }
+  .nav { display: flex; align-items: baseline; justify-content: space-between; padding: 22px 0; }
+  .wordmark {
+    font-family: var(--serif); font-weight: 400; font-size: 1.25rem;
+    letter-spacing: 0.04em; text-decoration: none;
+  }
+  .wordmark em { font-style: italic; color: var(--olive); }
+  nav.links { display: flex; gap: 30px; }
+  nav.links a {
+    text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--stone); transition: color 0.25s;
+  }
+  nav.links a:hover { color: var(--ink); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    min-height: 100svh; display: flex; flex-direction: column;
+    justify-content: center; padding-top: 80px;
+  }
+  .hero .label { margin-bottom: 34px; }
+  .hero h1 {
+    font-size: clamp(3.2rem, 9.5vw, 8.2rem);
+    line-height: 1.02; letter-spacing: -0.015em; text-wrap: balance;
+    max-width: 12ch;
+  }
+  .hero h1 .line { display: block; }
+  .hero h1 em { font-style: italic; color: var(--olive); }
+  .hero .sub {
+    margin-top: 40px; max-width: 44ch; color: var(--stone);
+    font-size: 1.05rem;
+  }
+  .hero .sub b { color: var(--ink); font-weight: 500; }
+
+  /* load choreography */
+  .rise { opacity: 0; transform: translateY(14px); transition: opacity 1.1s cubic-bezier(.2,.6,.2,1), transform 1.1s cubic-bezier(.2,.6,.2,1); }
+  body.loaded .rise { opacity: 1; transform: none; }
+
+  /* ---------- press and hold ---------- */
+  .smell { margin-top: 64px; display: flex; align-items: center; gap: 22px; }
+  .smell button {
+    position: relative; width: 92px; height: 92px; border-radius: 50%;
+    background: transparent; border: none; cursor: pointer; flex: none;
+    -webkit-tap-highlight-color: transparent; touch-action: none;
+    outline-offset: 6px;
+  }
+  .smell button:focus-visible { outline: 1.5px solid var(--olive); }
+  .smell svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+  .smell .track { fill: none; stroke: var(--hair); stroke-width: 1.5; }
+  .smell .fill {
+    fill: none; stroke: var(--olive); stroke-width: 1.5;
+    stroke-dasharray: 283; stroke-dashoffset: 283;
+  }
+  .smell button.holding .fill { transition: stroke-dashoffset 1.4s linear; stroke-dashoffset: 0; }
+  .smell button:not(.holding) .fill { transition: stroke-dashoffset 0.5s ease; }
+  .smell .nose {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--stone);
+  }
+  .smell .hint { max-width: 26ch; }
+  .smell .hint .label { display: block; margin-bottom: 4px; }
+  .smell .answer {
+    font-family: var(--serif); font-style: italic; font-size: 1.35rem;
+    opacity: 0; transform: translateY(6px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .smell.done .answer { opacity: 1; transform: none; }
+  .smell.done .prompt { display: none; }
+
+  /* ---------- shared section rhythm ---------- */
+  section { padding: clamp(90px, 14vh, 160px) 0; }
+  .rule-top { border-top: 1px solid var(--hair); }
+  .sec-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(44px, 7vw, 80px); }
+  .sec-head h2 { font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.1; text-wrap: balance; }
+  .sec-head .lede { color: var(--stone); max-width: 52ch; }
+
+  /* scroll reveal */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1s cubic-bezier(.2,.6,.2,1), transform 1s cubic-bezier(.2,.6,.2,1); transition-delay: var(--d, 0s); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ---------- the soap bar (CSS object) ---------- */
+  .showpiece { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 90px); align-items: center; }
+  .bar-stage { display: flex; justify-content: center; perspective: 900px; }
+  .bar-stage > div { width: min(340px, 82%); }
+  .soap {
+    position: relative; width: 100%; aspect-ratio: 8 / 5;
+    border-radius: 14px 16px 12px 15px;
+    background:
+      radial-gradient(120% 90% at 28% 18%, var(--soap-hi) 0%, transparent 55%),
+      linear-gradient(158deg, var(--soap-hi) 0%, #e9e6da 46%, var(--soap-lo) 100%);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.85) inset,
+      0 -14px 26px rgba(120,112,88,0.16) inset,
+      0 24px 40px -18px rgba(60,55,40,0.35),
+      0 6px 12px -6px rgba(60,55,40,0.18);
+    transform: rotateX(8deg) rotateZ(-2deg);
+    transition: transform 0.9s cubic-bezier(.2,.6,.2,1);
+    overflow: hidden;
+  }
+  .bar-stage:hover .soap { transform: rotateX(3deg) rotateZ(-0.5deg) translateY(-4px); }
+  .soap .stamp {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: var(--sans); font-size: 0.8rem; font-weight: 600;
+    letter-spacing: 0.5em; text-indent: 0.5em; text-transform: uppercase;
+    color: rgba(90, 84, 62, 0.32);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.7), 0 -1px 1px rgba(80,72,50,0.35);
+  }
+  .soap .sheen {
+    position: absolute; inset: -40% auto -40% -70%; width: 55%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%);
+    transform: skewX(-18deg) translateX(0);
+    transition: transform 1.4s cubic-bezier(.2,.6,.2,1);
+  }
+  .bar-stage:hover .soap .sheen { transform: skewX(-18deg) translateX(420%); }
+  .bar-caption { margin-top: 26px; text-align: center; }
+  .showpiece .copy p { max-width: 46ch; margin-bottom: 1.2em; }
+  .showpiece .copy p.pull {
+    font-family: var(--serif); font-size: clamp(1.5rem, 2.8vw, 2rem);
+    line-height: 1.3; font-style: italic; margin-bottom: 0.9em;
+  }
+  .showpiece .copy .rest { color: var(--stone); }
+
+  /* ---------- product menu ---------- */
+  .menu { border-top: 1px solid var(--hair); }
+  .item {
+    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr) auto auto;
+    gap: 10px clamp(18px, 4vw, 56px); align-items: baseline;
+    padding: 34px 0; border-bottom: 1px solid var(--hair);
+  }
+  .item .name {
+    font-family: var(--serif); font-size: clamp(1.5rem, 2.6vw, 2rem);
+    transition: font-style 0.15s, color 0.3s;
+  }
+  .item:hover .name { font-style: italic; color: var(--olive); }
+  .item .desc { color: var(--stone); font-size: 0.95rem; max-width: 44ch; }
+  .item .desc .ing { display: block; margin-top: 6px; font-size: 0.78rem; letter-spacing: 0.04em; color: var(--stone); opacity: 0.85; }
+  .item .price { font-family: var(--serif); font-size: 1.4rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .buy {
+    font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    background: none; border: none; cursor: pointer; color: var(--ink);
+    padding: 6px 0; position: relative; white-space: nowrap;
+  }
+  .buy::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 1px; background: var(--ink);
+    transform: scaleX(1); transform-origin: left; transition: transform 0.35s cubic-bezier(.2,.6,.2,1), background 0.3s;
+  }
+  .buy:hover { color: var(--olive); }
+  .buy:hover::after { background: var(--olive); transform: scaleX(0.55); }
+  .menu-note { margin-top: 22px; color: var(--stone); font-size: 0.82rem; max-width: 62ch; }
+
+  /* ---------- ingredient list, oversized ---------- */
+  .ingredients { background: var(--ink); color: var(--bone); }
+  .ingredients .label { color: #9a967f; }
+  .ing-list { list-style: none; margin-top: clamp(36px, 6vw, 64px); }
+  .ing-list li {
+    font-family: var(--serif); font-weight: 300;
+    font-size: clamp(2.6rem, 8vw, 6.4rem); line-height: 1.12;
+    letter-spacing: -0.01em; display: flex; align-items: baseline; gap: clamp(16px, 3vw, 36px);
+    border-bottom: 1px solid #33322a; padding: clamp(10px, 2vw, 22px) 0;
+  }
+  .ing-list li:last-child { border-bottom: none; }
+  .ing-list .n {
+    font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.2em;
+    color: #9a967f; font-variant-numeric: tabular-nums; flex: none;
+  }
+  .ing-list em { font-style: italic; color: #c9c4a9; }
+  .ing-after { margin-top: clamp(36px, 6vw, 60px); display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .ing-after p { color: #a5a18c; font-size: 0.95rem; max-width: 44ch; }
+  .ing-after .kicker { font-family: var(--serif); font-style: italic; font-size: 1.5rem; color: var(--bone); }
+
+  /* ---------- cure timeline ---------- */
+  .cure .track-line { position: relative; height: 1px; background: var(--hair); margin: clamp(50px, 8vw, 90px) 0 0; }
+  .cure .progress {
+    position: absolute; inset: 0 auto 0 0; width: 0; background: var(--olive);
+    transition: width 2.4s cubic-bezier(.3,.5,.2,1);
+  }
+  .cure.in .progress { width: 100%; }
+  .stops { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 30px; gap: 20px; }
+  .stop .when { font-family: var(--serif); font-style: italic; font-size: 1.35rem; }
+  .stop p { color: var(--stone); font-size: 0.92rem; max-width: 30ch; margin-top: 6px; }
+  .stop:nth-child(2) { text-align: center; }
+  .stop:nth-child(2) p { margin-inline: auto; }
+  .stop:nth-child(3) { text-align: right; }
+  .stop:nth-child(3) p { margin-left: auto; }
+
+  /* ---------- faq ---------- */
+  .faq details { border-bottom: 1px solid var(--hair); }
+  .faq summary {
+    list-style: none; cursor: pointer; display: flex; justify-content: space-between;
+    align-items: baseline; gap: 20px; padding: 26px 0;
+    font-family: var(--serif); font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .tick {
+    font-family: var(--sans); color: var(--stone); font-size: 1.1rem;
+    transition: transform 0.4s cubic-bezier(.2,.6,.2,1); flex: none;
+  }
+  .faq details[open] .tick { transform: rotate(45deg); color: var(--olive); }
+  .faq details p { color: var(--stone); max-width: 58ch; padding: 0 0 28px; }
+
+  /* ---------- find us / footer ---------- */
+  .find { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .find h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: 12px; }
+  .find p { color: var(--stone); max-width: 42ch; }
+  .find a { color: var(--ink); text-decoration-color: var(--olive); text-underline-offset: 3px; }
+  footer { border-top: 1px solid var(--hair); padding: 40px 0 56px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 40px; color: var(--stone); font-size: 0.82rem; }
+  footer .sig { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--ink); }
+
+  @media (max-width: 780px) {
+    nav.links { display: none; }
+    .showpiece, .ing-after, .find { grid-template-columns: 1fr; }
+    .item { grid-template-columns: 1fr auto; grid-template-areas: "name price" "desc desc" "buy buy"; }
+    .item .name { grid-area: name; }
+    .item .price { grid-area: price; }
+    .item .desc { grid-area: desc; }
+    .item .buy-cell { grid-area: buy; }
+    .stops { grid-template-columns: 1fr; }
+    .stop:nth-child(2), .stop:nth-child(3) { text-align: left; }
+    .stop:nth-child(2) p, .stop:nth-child(3) p { margin: 6px 0 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rise, .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .cure .progress { transition: none; }
+    .cure.in .progress { width: 100%; }
+    .soap, .soap .sheen { transition: none; }
+    .smell button.holding .fill { transition: stroke-dashoffset 0.1s linear; }
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="wordmark" href="#top">The <em>Quiet</em> Bar</a>
+    <nav class="links">
+      <a href="#bars">The bars</a>
+      <a href="#why">Why quiet</a>
+      <a href="#faq">Questions</a>
+      <a href="#find">Find us</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <span class="label rise" style="transition-delay:0.1s">Handmade in Kelowna, British Columbia</span>
+  <h1>
+    <span class="line rise" style="transition-delay:0.35s">Soap that</span>
+    <span class="line rise" style="transition-delay:0.55s">keeps to <em>itself.</em></span>
+  </h1>
+  <p class="sub rise" style="transition-delay:0.85s">No fragrance. No dye. No noise. <b>Four ingredients</b>, poured by hand and cured six full weeks. Made for sensitive skin and for people who are done being advertised to by their own bathroom.</p>
+
+  <div class="smell rise" id="smell" style="transition-delay:1.15s">
+    <button id="smellBtn" aria-label="Press and hold to smell the soap">
+      <svg viewBox="0 0 96 96" aria-hidden="true">
+        <circle class="track" cx="48" cy="48" r="45"></circle>
+        <circle class="fill" cx="48" cy="48" r="45"></circle>
+      </svg>
+      <span class="nose">smell</span>
+    </button>
+    <div class="hint">
+      <span class="label prompt">Press and hold</span>
+      <span class="label prompt" style="display:block; letter-spacing:0.1em; text-transform:none; margin-top:2px;">to sample the scent</span>
+      <span class="answer">That's it. That's the whole scent.</span>
+    </div>
+  </div>
+</div>
+
+<section class="rule-top" id="why">
+  <div class="wrap showpiece">
+    <div class="bar-stage reveal">
+      <div>
+        <div class="soap">
+          <span class="sheen"></span>
+          <span class="stamp">Quiet</span>
+        </div>
+        <p class="bar-caption label">Batch nº 001 · cut by hand</p>
+      </div>
+    </div>
+    <div class="copy">
+      <p class="pull reveal">Fragrance is the loudest thing in most bathrooms.</p>
+      <p class="rest reveal" style="--d:0.15s">One word on a label, "parfum," can legally stand in for dozens of compounds nobody has to name. It is also among the most common causes of skin irritation. We would rather tell you everything.</p>
+      <p class="rest reveal" style="--d:0.3s">Which is easy, because there are only four things to tell. No essential oils standing in for fragrance. No dye, no mica, no palm. And all the glycerin your skin was promised stays in the bar, where cold-process soap has always kept it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rule-top" id="bars">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label reveal">The bars</span>
+      <h2 class="reveal" style="--d:0.1s">Small batches, numbered and traceable.</h2>
+      <p class="lede reveal" style="--d:0.2s">Every loaf is poured by hand, cut the next day, and cured six full weeks because that is what good soap takes. Ask about your batch number. We keep the logs.</p>
+    </div>
+
+    <div class="menu">
+      <div class="item reveal">
+        <span class="name">The Original</span>
+        <span class="desc">Olive and coconut, balanced for every day. A creamy, patient lather that is gentle enough for faces.
+          <span class="ing">Olive oil · coconut oil · water · lye*</span>
+        </span>
+        <span class="price">$9</span>
+        <span class="buy-cell"><button class="buy" data-payment-link="">Buy</button></span>
+      </div>
+      <div class="item reveal" style="--d:0.1s">
+        <span class="name">The Coconut</span>
+        <span class="desc">One oil, taken seriously. Bright white, generous lather, and it works even in hard water.
+          <span class="ing">Coconut oil · water · lye*</span>
+        </span>
+        <span class="price">$9</span>
+        <span class="buy-cell"><button class="buy" data-payment-link="">Buy</button></span>
+      </div>
+      <div class="item reveal" style="--d:0.2s">
+        <span class="name">The Quiet Trio</span>
+        <span class="desc">Three bars in a plain kraft box. The gift for the person who reacts to every other gift.
+          <span class="ing">See individual bars</span>
+        </span>
+        <span class="price">$24</span>
+        <span class="buy-cell"><button class="buy" data-payment-link="">Buy</button></span>
+      </div>
+    </div>
+    <p class="menu-note">*Every real soap ever made begins with lye. None survives the process: it is consumed entirely turning oil into soap. What remains is soap, glycerin, and a little extra oil for your skin.</p>
+  </div>
+</section>
+
+<section class="ingredients">
+  <div class="wrap">
+    <span class="label reveal">The full ingredient list</span>
+    <ol class="ing-list">
+      <li class="reveal"><span class="n">01</span>Olive oil</li>
+      <li class="reveal" style="--d:0.12s"><span class="n">02</span>Coconut oil</li>
+      <li class="reveal" style="--d:0.24s"><span class="n">03</span>Water</li>
+      <li class="reveal" style="--d:0.36s"><span class="n">04</span><em>Lye</em></li>
+    </ol>
+    <div class="ing-after">
+      <p class="kicker reveal" style="--d:0.2s">Reads quickly, doesn't it.</p>
+      <p class="reveal" style="--d:0.35s">That is the entire label, in order, nothing abbreviated. If an ingredient ever joins this list, it will be because your skin wanted it there, not because a focus group did.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cure rule-top">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label reveal">The wait</span>
+      <h2 class="reveal" style="--d:0.1s">Good soap is mostly patience.</h2>
+    </div>
+    <div class="track-line"><span class="progress"></span></div>
+    <div class="stops">
+      <div class="stop reveal"><span class="when">Day one</span><p>Oils meet lye. The batter is poured, and the loaf goes to bed under cardboard.</p></div>
+      <div class="stop reveal" style="--d:0.15s"><span class="when">Day two</span><p>Unmolded and cut by hand. Every bar gets its batch number.</p></div>
+      <div class="stop reveal" style="--d:0.3s"><span class="when">Week six</span><p>Cured hard, tested, and finally allowed to leave the house.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq rule-top" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="label reveal">Questions</span>
+      <h2 class="reveal" style="--d:0.1s">Asked, answered, quietly.</h2>
+    </div>
+    <details class="reveal">
+      <summary>Is it really one hundred percent scent-free? <span class="tick">+</span></summary>
+      <p>Yes. No fragrance oil, no essential oil, no "natural fragrance," no masking scent. The bars carry the faint, clean smell of the oils themselves, and it does not linger on skin.</p>
+    </details>
+    <details class="reveal" style="--d:0.05s">
+      <summary>Lye sounds harsh. Is it? <span class="tick">+</span></summary>
+      <p>Lye is how every true soap has been made for about five thousand years. The reaction consumes it completely, we cure every batch six weeks, and we test before anything is sold. What reaches you is soap, glycerin, and extra oil.</p>
+    </details>
+    <details class="reveal" style="--d:0.1s">
+      <summary>Is it good for eczema or sensitive skin? <span class="tick">+</span></summary>
+      <p>Our bars contain no fragrance and no dye, which are two of the most common irritants, and many people with sensitive skin choose them for exactly that reason. We make soap, not medicine, so we will never make medical claims. If you have a skin condition, ask your doctor.</p>
+    </details>
+    <details class="reveal" style="--d:0.15s">
+      <summary>How long does a bar last? <span class="tick">+</span></summary>
+      <p>Three to five weeks of daily use, if you keep it on a dish that drains. Soap that sits in a puddle dissolves. The dish matters more than people think.</p>
+    </details>
+    <details class="reveal" style="--d:0.2s">
+      <summary>Do you ship? <span class="tick">+</span></summary>
+      <p>Anywhere in Canada. Local pickup in Kelowna is free, and in season you can find us in person at Okanagan markets.</p>
+    </details>
+  </div>
+</section>
+
+<section class="rule-top" id="find">
+  <div class="wrap find">
+    <div class="reveal">
+      <h2>Find us in person</h2>
+      <p><!-- MARKET SCHEDULE: update each season -->Okanagan market dates are coming for the winter season. Come by, smell nothing, and try a bar on your own skin.</p>
+    </div>
+    <div class="reveal" style="--d:0.15s">
+      <h2>Say hello</h2>
+      <p>Wholesale, custom orders, or a question about an ingredient. There are only four, so it will be a short conversation.<br><br>
+      <a href="mailto:hello@thequietbar.ca">hello@thequietbar.ca</a><br>
+      <a href="#" rel="me">@thequietbar</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="sig">The Quiet Bar</div>
+      <!-- LEGAL: Canadian cosmetic labelling requires maker name + mailing address; mirror it here -->
+      Kelowna, British Columbia, Canada
+    </div>
+    <div>
+      © <span id="yr"></span> · Soap is a cosmetic. We make no medical claims, or many claims at all.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- CONFIG: brand name lives here until it's final ----
+  const BRAND = "The Quiet Bar";
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // Load choreography
+  window.addEventListener("load", () => document.body.classList.add("loaded"));
+  // Fallback if load stalls on slow font fetch
+  setTimeout(() => document.body.classList.add("loaded"), 1800);
+
+  // Nav background on scroll
+  const hdr = document.querySelector("header");
+  addEventListener("scroll", () => hdr.classList.toggle("scrolled", scrollY > 24), { passive: true });
+
+  // Scroll reveals
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      // Reveal when entering view, and also when already scrolled past
+      // (anchor links and fast scrolls must never leave a section invisible)
+      if (e.isIntersecting || e.boundingClientRect.top < 0) {
+        e.target.classList.add("in"); io.unobserve(e.target);
+      }
+    }
+  }, { threshold: 0.18, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal, .cure").forEach(el => io.observe(el));
+  // Safety net for anchor jumps: sweep on scroll end
+  addEventListener("scroll", () => {
+    document.querySelectorAll(".reveal:not(.in), .cure:not(.in)").forEach(el => {
+      if (el.getBoundingClientRect().top < innerHeight * 0.4) el.classList.add("in");
+    });
+  }, { passive: true });
+
+  // Press-and-hold smell test
+  const smell = document.getElementById("smell");
+  const btn = document.getElementById("smellBtn");
+  let holdTimer = null;
+  const HOLD_MS = 1400;
+  const start = () => {
+    if (smell.classList.contains("done")) return;
+    btn.classList.add("holding");
+    holdTimer = setTimeout(() => { smell.classList.add("done"); btn.classList.remove("holding"); }, HOLD_MS);
+  };
+  const stop = () => { clearTimeout(holdTimer); btn.classList.remove("holding"); };
+  btn.addEventListener("pointerdown", start);
+  btn.addEventListener("pointerup", stop);
+  btn.addEventListener("pointerleave", stop);
+  btn.addEventListener("pointercancel", stop);
+  btn.addEventListener("keydown", (e) => { if ((e.key === " " || e.key === "Enter") && !e.repeat) start(); });
+  btn.addEventListener("keyup", stop);
+
+  // Buy buttons: paste Square/Stripe payment links into data-payment-link
+  document.querySelectorAll(".buy").forEach(b => {
+    b.addEventListener("click", () => {
+      const link = b.dataset.paymentLink;
+      if (link) { window.location.href = link; }
+      else { const t = b.textContent; b.textContent = "Soon"; setTimeout(() => b.textContent = t, 1500); }
+    });
+  });
+</script>
+
+</body>
+</html>
