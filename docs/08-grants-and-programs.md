@@ -83,6 +83,10 @@ Only **~10% of small businesses know this exists**. Of those who used it, 97% sa
 
 Not available at ORL, so don't plan around them: IBISWorld, Business Source, Gale, Data Axle. The free UBC guides above fill that gap.
 
+### Two more free things worth ten minutes each
+- **[ISED Financial Performance Data](https://ised-isde.canada.ca/site/financial-performance-data/en)** — free, no account. Benchmark revenue and expense ratios against real firms **by industry code and revenue band**. The relevant codes are **NAICS 325611** (soap manufacturing) and **325620** (toilet preparations). This is also the tool the CRA Liaison Officer walks you through, and it's the best free input for the financial section of a business plan.
+- **[Canada Post Solutions for Small Business](https://www.canadapost-postescanada.ca/cpc/en/business/small-business.page)** — free membership, no fees, up to 32% off domestic shipping plus a free label tool. Directly useful once the website starts taking orders.
+
 ### Other free tools
 - **[BizPaL](https://www.bcbizpal.ca)** — customized list of every permit you actually need
 - **[Business Benefits Finder](https://innovation.canada.ca/innovation/s/?language=en_CA)** — ISED's matcher across 1,500+ programs, five minutes
@@ -117,9 +121,15 @@ $10,000 plus five $1,000 runners-up. Revenue **ceiling** of $1M rather than a fl
 
 Underwritten by Intact, brokered by BrokerLink (hbbginsurance@brokerlink.ca). Covers property temporarily at a **farmers market or trade show**, and lets you add **Additional Insureds**, which is exactly what market managers demand. Revenue cap $175,000. Group policy renews June 1.
 
+🚨 **Order of operations — the CNF gates everything.** Professional membership requires **emailing HBBG a copy of an acknowledged Cosmetic Notification Form**, and the insurance only covers CNF'd products. So the sequence is **file the CNF → join HBBG → buy insurance → sell at markets**, and the CNF itself is only due within 10 days of first sale. File it early rather than at the deadline, or the insurance won't be in place for the first market.
+
 🚨 **Two conditions that void the policy:**
 1. **"Only products that have had a Cosmetic Notification Form submitted to Health Canada can be covered."** No CNF means the $500 buys nothing at claim time.
 2. **If membership lapses, insurance is treated as cancelled even if paid in full.**
+
+Other conditions: gross revenue max $175,000, US sales capped at 25% of total, and over 50% of sales must be bath and body. Confirm the current rate before budgeting — the posted sheet is 2025-26, the group policy renews June 1, and the $2M product currently shows out of stock on their store.
+
+**Get two comparison quotes.** [Zensurance has a dedicated soap-maker page](https://www.zensurance.com/soap-maker-insurance) quoting from about $510/yr for $1M (the $2M price isn't published, so run the application). And **Acera Insurance at Capri Centre in Kelowna** is the local broker the Kelowna market itself points body-and-bath vendors toward.
 
 Membership also gets supplier discount codes, a public directory listing, and Health Canada advocacy. Their courses cost extra (~$35). The members' forum is nearly dormant — don't join for community.
 
@@ -156,7 +166,7 @@ Membership also gets supplier discount codes, a public directory listing, and He
 | **Vancity Women Entrepreneurs** | **Excludes Kelowna** — Lower Mainland, Victoria and Sea to Sky only |
 | **Coralus / Elleiance / Accelerate Okanagan** | Dormant, $1,320/yr, and venture-tech-focused respectively |
 | **Craft Council of BC** ($78 with Kelowna discount) | Their jury categories are clay, fibre, glass, metal, wood, mixed. Soap almost certainly can't be juried, and their shop is on Granville Island. Email gi_shop@craftcouncilbc.ca before paying |
-| **BCAFM vendor membership** ($75) | Voluntary, not required. Join only once you have a stall, then compare their Duuo/Western rates against HBBG's $500 |
+| **BCAFM vendor membership** ($75) | Voluntary, not required — and **their vendor insurance explicitly excludes soap makers.** Their own page bars *"vendors selling soaps/makeup/creams/baby products and lotions/essential oils."* The Duuo option is also being discontinued Nov 30, 2026 and doesn't cover products liability anyway. Join for the supplier perks or not at all |
 | **Buy BC logo** | Agriculture, food and beverage only. Soap isn't food |
 | **Nutrition Coupon Program** | Food only. Soap vendors cannot accept the coupons |
 
